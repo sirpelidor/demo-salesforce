@@ -1,0 +1,22 @@
+Web application demo using salesforce as datasource to display data via JSF backed by Spring Boot
+
+Please use Maven to run this app:
+
+1) mvn clean package
+2) mvn spring-boot:run
+
+Port is set to 9090, and face context is set to /appui/*
+http://localhost:9090/appui/index.xhtml
+
+
+Custom package:
+wsc-salesforce-01.jar
+wsc-uber-01.jar
+
+The salesforce jars were built manually from source and if you don't already have those in you .m2 directory, you'll need to extract them from demo-salesforce-0.1-SNAPSHOT.jar under the /target folder
+1) open console, change to /target directory
+2) untar the jar file:   jar -xvt demo-salesforce-0.1-SNAPSHOT.jar
+3) jars will be locate inside lib folder
+4) install jars into your .m2 repository
+mvn install:install-file -Dfile=wsc-salesforce-01.jarr -DgroupId=demo.salesforce -DartifactId=wsc-salesforce -Dversion=0.1 -Dpackaging=jar
+mvn install:install-file -Dfile=wsc-uber-01.jar -DgroupId=demo.salesforce -DartifactId=wsc-uber -Dversion=0.1 -Dpackaging=jar
