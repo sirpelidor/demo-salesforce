@@ -96,6 +96,12 @@
             <artifactId>mockito-all</artifactId>
             <version>1.9.5</version>
         </dependency>
+        <!-- open id -->
+        <dependency>
+            <groupId>org.expressme</groupId>
+            <artifactId>JOpenId</artifactId>
+            <version>1.09</version>
+        </dependency>
     </dependencies>
     <build>
         <outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>

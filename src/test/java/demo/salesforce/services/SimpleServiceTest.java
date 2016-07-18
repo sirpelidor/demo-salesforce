@@ -54,12 +54,16 @@ public class SimpleServiceTest {
     private List<Opportunity> getOpportunities(){
         Opportunity o1 = new Opportunity();
         o1.setName("o1");
+        o1.setIsClosed(true);
         Opportunity o2 = new Opportunity();
         o2.setName("o2");
+        o2.setIsClosed(true);
         Opportunity o3 = new Opportunity();
         o3.setName("o3 University");
+        o3.setIsClosed(true);
         Opportunity o4 = new Opportunity();
         o4.setName("o4");
+        o4.setIsClosed(false);
 
         return Arrays.asList(o1,o2,o3,o4);
     }

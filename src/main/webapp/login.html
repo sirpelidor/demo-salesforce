@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>Salesforce Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript">
+	function login(site){
+		var url = "openidtester?op=";
+		var op = "";
+		if(site == "google")
+			op = "Google";
+		else
+			op = "Yahoo";
+		window.location = url + op;
+	}//login
+	</script>
+</head>
+<body>
+<h1 class="title_box_red">Salesforce Demo</h1>
+<div id="widget" class="widget">
+    <span>Sign in using your account with</span>
+    <div id="view">
+        <div style="display: block; ">
+            <div id="pages" style="top: 31px; ">
+                <div class="page">
+                    <ul class="providers">
+                        <li id="yahoo" class="on" onclick="login('yahoo')"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -72,7 +72,7 @@
                 </div>
             </div> <!-- Content END -->
             <textArea rows="10" cols="200">
-            curl https://na30.salesforce.com/services/data/v20.0/query?q=SELECT+name+,+closedate+,+isclosed+,+iswon+from+Opportunity+where+name+NOT+includes+(+University+) -H 'Authorization: Bearer #{opportunityBean.sessionId}' -H 'X-PrettyPrint:1'
+            curl https://na30.salesforce.com/services/data/v20.0/query?q=SELECT+name+,+closedate+,+isclosed+,+iswon+from+Opportunity+where+isclosed+=+true -H 'Authorization: Bearer #{opportunityBean.sessionId}' -H 'X-PrettyPrint:1'
             </textArea>
         </div> <!-- main -->
     </div> <!-- wrapper -->

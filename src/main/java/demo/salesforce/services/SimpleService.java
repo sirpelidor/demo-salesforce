@@ -20,7 +20,7 @@ public class SimpleService {
     private OpportunitySalesForceDao opportunitySalesForceDao;
     private ContactSalesForceDao contactSalesForceDao;
     //name doesn't contain 'University'
-    private Predicate<Opportunity> notUniversity = opportunity -> !opportunity.getName().contains("University");
+    private Predicate<Opportunity> hasClosed = opportunity -> opportunity.getIsClosed()== true;
 
     /**
      * Filter opportunity with name contains 'University'
@@ -29,7 +29,7 @@ public class SimpleService {
     public List<Opportunity> getFilteredOpportunityList(){
         List<Opportunity> list = opportunitySalesForceDao.findAll();
         return list.stream()
-                .filter(notUniversity)
+                .filter(hasClosed)
                 .collect(Collectors.toList());
     }
 
